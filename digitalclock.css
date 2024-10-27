@@ -1,0 +1,24 @@
+.digital-clock{
+    display: flex;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.digit{
+    width: 1em;
+    margin: 0 5px;
+    text-align: center;
+    background: black;
+    color: red;
+    border: 2px solid red;
+    display: inline-block;
+}
+.colon{
+    width:0.5em;
+    margin:0 5px;
+    text-align: center;
+    color: red;
+}
