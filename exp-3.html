@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            padding: 20px;
+        }
+        div{
+            padding: 20px;
+            background-color: green;
+            width: max-content;
+        }
+        span{
+            display: block;
+            padding: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+<script>
+    const body =document.getElementsByTagName("body")[0];
+    const div =document.getElementsByTagName("div")[0];
+    const span =document.getElementsByTagName("span")[0];
+    const button =document.getElementsByTagName("button")[0];
+    body.addEventListener('click',function(){
+        console.log("body was clicked")
+    });
+    div.addEventListener('click',function(){
+        console.log("div was clicked")
+    });
+     span.addEventListener('click',function(){
+        console.log("span was clicked")
+    });
+    button.addEventListener('click',function(){
+        console.log("button was clicked")
+    });
+</script>
+</body>
+</html>

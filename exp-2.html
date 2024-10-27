@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Example</title>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: solid black 2px; /* Fixed 'soild' to 'solid' */
+            display: flex; /* Optional: allows you to center items */
+            justify-content: center; /* Optional: centers items horizontally */
+            align-items: center; /* Optional: centers items vertically */
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData('text/html', ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData('text/html');
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" class="container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="vvit.png" alt="vvit" draggable="true" ondragstart="drag(event)" />
+</body>
+</html>
